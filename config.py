@@ -1,8 +1,12 @@
-# REQUIRED CONFIG
-BOT_TOKEN = ""
-OWNER_ID = 0
-TELEGRAM_API = 0
-TELEGRAM_HASH = ""
+import os
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+TELEGRAM_API = int(os.environ.get("TELEGRAM_API", ""))
+TELEGRAM_HASH = os.environ.get("TELEGRAM_HASH", "")
+
+BASE_URL = os.environ.get("BASE_URL", "").strip()
+DEFAULT_UPLOAD = os.environ.get("DEFAULT_UPLOAD", "rc").strip()
 # OPTIONAL CONFIG
 TG_PROXY = {}
 USER_SESSION_STRING = ""
